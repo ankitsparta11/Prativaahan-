@@ -1,0 +1,27 @@
+{
+  "name": "sheycars",
+  "version": "1.0.0",
+  "description": "car-rental-website",
+  "main": "index.js",
+  "engines": {
+    "node" : "16.13.0",
+    "npm" : "8.1.3"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "shivam malviya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5",
+    "nodemon": "^2.0.15",
+    "stripe": "^8.195.0",
+    "uuid": "^8.3.2"
+  }
+}
