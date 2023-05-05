@@ -61,7 +61,7 @@ function EditCar({ match }) {
               </Form.Item>
               <Form.Item
                 name="rentPerHour"
-                label="Rent per hour"
+                label="Rent per day"
                 rules={[{ required: true }]}
               >
                 <Input />

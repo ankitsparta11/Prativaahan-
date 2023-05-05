@@ -35,9 +35,9 @@ function BookingCar({ match }) {
   }, [cars]);
 
   useEffect(() => {
-    setTotalAmount(totalHours * car.rentPerHour);
+    setTotalAmount(totalHours/24 * car.rentPerHour);
     if (driver) {
-      setTotalAmount(totalAmount + 30 * totalHours);
+      setTotalAmount(totalAmount + 300 * totalHours/24);
     }
   }, [driver, totalHours]);
 
@@ -85,7 +85,7 @@ function BookingCar({ match }) {
           </Divider>
           <div style={{ textAlign: "right" }}>
             <p>{car.name}</p>
-            <p>{car.rentPerHour} Rent Per hour /-</p>
+            <p>{car.rentPerHour} Rent Per day /-</p>
             <p>Fuel Type : {car.fuelType}</p>
             <p>Max Persons : {car.capacity}</p>
           </div>

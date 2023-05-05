@@ -4,8 +4,8 @@
   "description": "car-rental-website",
   "main": "index.js",
   "engines": {
-    "node" : "16.13.0",
-    "npm" : "8.1.3"
+    "node": "16.13.0",
+    "npm": "8.1.3"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -18,10 +18,10 @@
   "author": "shivam malviya",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
-    "mongoose": "^6.1.5",
-    "nodemon": "^2.0.15",
-    "stripe": "^8.195.0",
+    "express": "^4.18.2",
+    "mongoose": "^6.11.0",
+    "nodemon": "^2.0.22",
+    "stripe": "^8.222.0",
     "uuid": "^8.3.2"
   }
 }
