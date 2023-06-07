@@ -80,6 +80,21 @@ function EditCar({ match }) {
               >
                 <Input />
               </Form.Item>
+              <Form.Item
+                name="carLocation"
+                label="District"
+                rules={[{ required: true }]}
+              >
+                <Input />
+              </Form.Item>
+
+              <Form.Item
+                name="email"
+                label="Owner email"
+                rules={[{ required: true }]}
+              >
+                <Input />
+              </Form.Item>
 
               <div className="text-right">
                 <button className="btn1">Edit CAR</button>

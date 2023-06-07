@@ -60,6 +60,18 @@ function Home() {
 
 
 }
+
+const [ input, setInput ] = useState('');
+const inputChangeHandler = (event) => {
+  const newInputVal = event.target.value;
+  setInput(newInputVal);
+};
+let availableCars=[]
+if(input.length!=0)
+availableCars = totalCars.filter(car=>car.district==input)
+else
+availableCars=totalCars;
+
   return (
     <DefaultLayout>
         
@@ -68,7 +80,7 @@ function Home() {
                  <Col lg={20} sm={24} className='d-flex justify-content-left'>
 
                      <RangePicker showTime={{format: 'HH:mm'}} format='MMM DD yyyy HH:mm' onChange={setFilter}/>
-                 
+                     <input type="text" placeholder="Enter your District"  onChange={inputChangeHandler} />
                  </Col>
 
              </Row>
@@ -77,7 +89,7 @@ function Home() {
         {loading == true && (<Spinner/>)}
        <Row justify='center' gutter={16}>
 
-{totalCars.map(car=>{
+{availableCars.map(car=>{
     return <Col lg={5} sm={24} xs={24}>
          <div className="car p-2 bs1">
             <img src={car.image} className="carimg"/>

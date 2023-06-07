@@ -35,7 +35,7 @@ function BookingCar({ match }) {
   }, [cars]);
 
   useEffect(() => {
-    setTotalAmount(totalHours/24 * car.rentPerHour);
+    setTotalAmount(Math.ceil(totalHours/24) * car.rentPerHour);
     if (driver) {
       setTotalAmount(totalAmount + 300 * totalHours/24);
     }

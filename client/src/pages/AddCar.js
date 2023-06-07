@@ -40,6 +40,13 @@ function AddCar() {
                            <Form.Item name='fuelType' label='Fuel Type' rules={[{required: true}]}>
                                <Input/>
                            </Form.Item>
+                           <Form.Item name='district' label='Enter your District' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+                           <Form.Item name='email' label='Owner email' rules={[{required: true}]}>
+                               <Input/>
+                           </Form.Item>
+
 
                            <div className='text-right'>
                            <button className='btn1'>ADD CAR</button>
